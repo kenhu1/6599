@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.oxxostudio.tw/demo/201803/css-animation-demo-06.html -->
+<html lang="zh-tw">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="author" content="oxxo.studio">
+    <meta name="copyright" content="oxxo.studio">
+    <title>resume</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed="">
+    <script>
+        $(document).ready(function() {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function() {
+
+                /* Check the location of each desired element */
+                $('.hideme').each(function(i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 500);
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+    <div class="hea">
+
+        <a id="nav" href="#aa">Programming Skill&emsp;</a>
+
+        <a id="nav" href="#bb">Skill&emsp;</a>
+        <a id="nav" href="#cc">Experience&emsp;</a>
+        <a id="nav" href="#dd">Other Experience&emsp;</a>
+
+    </div>
+    <div>
+
+        <div class="test goods" id="img"></div>
+        <div class="test1 " id="img1"></div>
+        <P Align=center style="margin-top: 0px;"><img src="./img/a1.png" style="position:relative;top:150px;"> </p>
+
+        <script>
+        </script>
+        <!--個人簡介(頭)-->
+        <div class="menucontainer">
+            <div class="margin">
+                <div class="me">
+                    <div id="cover" class="coverflow">
+                        <a><img src='./img/b1.jpg' alt=' '></a>
+                        <a><img src='./img/b2.jpg' alt=' '></a>
+                        <a><img src='./img/b3.jpg' alt=' '></a>
+                    </div>
+                    <br>
+                    <h3 class="name">胡博凱</h3>
+                    <i class="test2">讓夢想成真的最好辦法就是醒來</i>
+                    <h3 class="test2">2001/03/13</h3>
+                    <h3 class="test2">New Taipei City,Taiwan</h3>
+                    <h3 class="test2">CYIM</h3>
+
+                    <div class="b1">
+                        <div class="b2">
+                            <a href="https://instagram.com/bokaihu_0313?igshid=17yfmkbnkaw97" target="_blank">
+                                <img class="ig" src="./img/instagram.png">
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100004922432705" target="_blank">
+                                <img class="fb" src="./img/facebook.png">
+                            </a>
+                            <a href="mailto:hu0908856171@gmail.com" target="_blank">
+                                <img class="em" src="./img/message.png">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <section>
+            <div class="skill-left">
+                <div class="text3" id="aa">
+                    <!--<h1 class="pro">PROGRAMMING SKILL</h1>-->
+                    <img src="./img/1234.png" alt=" "></h1>
+                </div>
+                <div class="b3 ">
+                    <div class="b4 ">
+                        <p><i><b>Html / CSS</b></i></p>
+                        <div class="skills hc "></div>
+                    </div>
+                    <div class="b4 ">
+                        <p><i><b>Java</b></i></p>
+                        <div class="skills j "></div>
+                    </div>
+                    <div class="b4 ">
+                        <p><i><b>C++</b></i></p>
+                        <div class="skills cc "></div>
+                    </div>
+                    <div class="b4 ">
+                        <p><i><b>CAD 2D</b></i></p>
+                        <div class="skills d "></div>
+                    </div>
+                    <div class="b4 ">
+                        <p><i><b>Ai</b></i></p>
+                        <div class="skills a "></div>
+                    </div>
+                </div>
+
+                <img src="./img/53f.png" class="skill-left3">
+
+        </section>
+
+
+        <section>
+
+
+            <!--觸碰出現照片-->
+            <div class="ppro111">
+                <div class="pro1  hideme">
+
+
+                </div>
+                <div> <img src="./img/skill.png" alt=" " class="rr1 hideme"></div>
+
+                <div class="allpiano  hideme">
+                    <div class="piano">鋼琴</div>
+                    <div class="pi"> <img id="bb" src="./img/piano.jpg" alt="" class="piano-img"></div>
+                    <div class="wrapper1 " data-anim="base wrapper ">
+                        <div class="circle cir1 " data-anim="base left "></div>
+                        <div class="circle " data-anim="base right "></div>
+                    </div>
+                </div>
+
+
+                <div class="sk">高爾夫</div>
+                <div class="skk"> <img src="./img/sk.jpg" alt="" class="sk-img"></div>
+                <div class="wrapper2 " data-anim="base wrapper ">
+                    <div class="circle cir2 " data-anim="base left "></div>
+                    <div class="circle " data-anim="base right "></div>
+                </div>
+
+                <div class="bk ">搏擊</div>
+                <div class="bkk"> <img src="./img/bk.jpg" alt="" class="bk-img"></div>
+                <div class="wrapper3 " data-anim="base wrapper ">
+                    <div class="circle cir3 " data-anim="base left "></div>
+                    <div class="circle " data-anim="base right "></div>
+                </div>
+
+                <div class="ps ">PS</div>
+                <div class="pss"> <img src="./img/ps.jpg" alt="" class="ps-img"></div>
+                <div class="wrapper4 " data-anim="base wrapper ">
+                    <div class="circle cir4 " data-anim="base left "></div>
+                    <div class="circle " data-anim="base right "></div>
+                    <p>Touch these!!</p>
+                </div>
+
+            </div>
+        </section>
+        <h1 style="margin-left:580px;margin-top: 360px;"><img src="./img/123456 (2).png" alt=" " class="hideme"> </h1>
+        <section>
+
+            <div class="col-left ">
+
+                <div class="col1  hideme ">
+                    <div class="aa1">
+                        <div>
+                            <h2>大一上</h2>
+                            <div class="coll1-pp4">
+                                <a target="_blank">
+                                    <img src="./img/edc7.png" class="coll4" id="cc">
+                                    <p class="coll1-p4">全國鋼琴比賽第三名</p>
+                                </a>
+                            </div>
+                            <ul class="ul4">
+                                <li>全國鋼琴比賽第三名</li>
+                                <li>校內鋼琴射成發獨奏</li>
+                                <li>校內鋼琴射成發四手聯彈</li>
+                                <li>考取CAD國際認證</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="h222">大一下</h2>
+
+                            <div class="coll1-pp2">
+                                <a href="https://extraordinary-soap.jimdosite.com/" target="_blank">
+                                    <img src="./img/edc2.png" class="coll2">
+                                    <p class="coll1-p2">企概網頁專案</p>
+                                </a>
+                            </div>
+                            <ul class="ul2">
+                                <li>企概網頁專案(附網站連結)</li>
+                                <li>成績進步獎</li>
+                                <li>校內人文素養設計佳作</li>
+                                <li>校內鋼琴社成發獨奏</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="aa2">
+                        <div>
+                            <h2 class="h111">大二上</h2>
+                            <!--<div class="wei-grids-wall">
+                            <div class="wei-grid">
+                                <a href="https://extraordinary-soap.jimdosite.com/" target="_blank">
+                                    <img src="./img/edc1.jpg" class="coll2">
+                                </a>-->
+                            <div class="coll1-pp">
+                                <a target="_blank">
+                                    <img src="./img/edc4.png" class="coll1">
+                                    <p class="coll1-p">網程後端專案</p>
+                                </a>
+                            </div>
+                            <ul class="ul1">
+                                <li>網程後端專案</li>
+                                <li>系內宿營</li>
+                                <li>校內鋼琴社成發獨奏</li>
+                                <li>校內鋼琴社成發四手聯彈</li>
+                                <li>雙主修財金</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 class="h333">大二下</h2>
+                            <div class="coll1-pp3">
+                                <a href="https://lesleychen0810.github.io/midterm/" target="_blank">
+                                    <img src="./img/edc3.png" class="coll3">
+                                    <p class="coll1-p3">期中網頁專案</p>
+                                </a>
+                            </div>
+                            <ul class="ul3">
+                                <li>期中網頁專案(附網站連結)</li>
+                                <li>加入校內志工</li>
+                                <li>舉辦、組織社團活動</li>
+                                <li>加入校外學習活動</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <img src="./img/1234567.png" alt=" " class="rr2 hideme">
+        </section>
+
+
+        <section>
+            <div class="col-left02">
+                <div all="" id="dd">
+                    <div class="allslide">
+                        <div class="slide">
+
+
+                            <div class="mySlides" style="display: block;">
+                                <img src="./img/ss3.jpg">
+                            </div>
+                            <div class="mySlides" style="display: none;">
+                                <img src="./img/ss4.jpg">
+                            </div>
+                            <div class="mySlides" style="display: none;">
+                                <img src="./img/ss2.jpg">
+                            </div>
+                            <div class="mySlides" style="display: none;">
+                                <img src="./img/ss5.jpg">
+                            </div>
+                            <div class="mySlides" style="display: none;">
+                                <img src="./img/ss1.png.jpg">
+                            </div>
+
+
+
+                            <a class="pre" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        </div>
+                        <br>
+                        <div class="cirbtn">
+                            <span class="cir" onclick="currentSlide(1)"></span>
+                            <span class="cir" onclick="currentSlide(2)"></span>
+                            <span class="cir" onclick="currentSlide(3)"></span>
+                            <span class="cir" onclick="currentSlide(4)"></span>
+                            <span class="cir" onclick="currentSlide(5)"></span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <button onclick="topFunction()" id="myBtn">Top</button>
+
+
+        <footer class="footer">
+
+            <br><br>
+            <div class="ft">
+                copyright&copy;<b>HU PO KAI</b> <br>
+            </div>
+
+            </div>
+
+
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
