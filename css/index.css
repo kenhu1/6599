@@ -1,0 +1,1192 @@
+    /*---背景---*/
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url(../img-bg/retina_wood/retina_wood.png);
+        /*另一種木紋 資料夾還有更多background-image:url(img-bg/purty_wood/purty_wood.png);*/
+        /*原本我選的白色 background-image:url(img-bg/beanstalk/beanstalk.png);*/
+    }
+    
+    a,
+    a:link,
+    a:visited {
+        color: white;
+        text-decoration: none
+    }
+    
+    a:hover {
+        color: #F4AB25;
+        background-color: #FFECD9;
+        text-decoration: none;
+    }
+    
+    .shape-ex1 {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        max-width: 100%;
+        display: block;
+        text-align: center;
+        background-color: #eb9700;
+    }
+    /*--------開頭動畫------*/
+    
+    .test {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        animation-name: anim;
+        animation-duration: 2s;
+    }
+    
+    .test1 {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        right: 0;
+        animation-name: anim1;
+        animation-duration: 2s;
+    }
+    
+    .goods img:hover {
+        animation: myfirst 0.5s infinite;
+        /*無限次跳動   infinite*/
+    }
+    
+    @keyframes myfirst {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate(0px, -9px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    
+    #img {
+        background-image: url('../img/12.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-fill-mode: forwards;
+    }
+    
+    #img1 {
+        background-image: url('../img/12.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes anim {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 150px;
+        }
+    }
+    
+    @keyframes anim1 {
+        0% {
+            right: 0;
+        }
+        100% {
+            right: 150px;
+        }
+    }
+    
+    .goods:hover {
+        animation: myfirst1 0.5s infinite;
+        /*無限次跳動   infinite*/
+    }
+    
+    .good:hover {
+        animation: myfirst 0.5s infinite;
+        /*無限次跳動   infinite*/
+    }
+    
+    @keyframes myfirst1 {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate(0px, -9px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    
+    @keyframes myfirst {
+        100% {
+            transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate(0px, -9px);
+        }
+        0% {
+            transform: translate(0px, 0px);
+        }
+    }
+    /*---------個人浮動簡歷-------*/
+    
+    .menucontainer {
+        top: 20px;
+        margin-left: 5%;
+        margin-top: 300px;
+        position: sticky;
+    }
+    
+    .margin {
+        float: left;
+    }
+    
+    .me {
+        width: 280px;
+        height: 550px;
+        /*550*/
+        background-color: #f8760c50;
+        border-radius: 20px;
+    }
+    /*
+.coverflow img {
+    border-radius: 50%;
+}*/
+    
+    .me1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .coverflow {
+        width: 200px;
+        height: 200px;
+        left: 40px;
+        position: relative;
+    }
+    
+    .coverflow>a {
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        transition: all 0.6s;
+        margin: 20px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /*影片長度需更改，變為6s*圖片數量*/
+        -webkit-animation: silder 18s linear infinite;
+        animation: silder 18s linear infinite;
+    }
+    
+    .coverflow>a>img {
+        max-width: 100%;
+    }
+    /*動畫關鍵影格*/
+    
+    @-webkit-keyframes silder {
+        3% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        30% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    
+    @keyframes silder {
+        3% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        30% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    /*每個圖片各延遲5秒*/
+    
+    .coverflow>a:nth-child(3) {
+        -webkit-animation-delay: 12s;
+        animation-delay: 12s;
+    }
+    
+    .coverflow>a:nth-child(2) {
+        -webkit-animation-delay: 6s;
+        animation-delay: 6s;
+    }
+    
+    .coverflow>a:nth-child(1) {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+    }
+    /*滑入時停止播放*/
+    
+    .coverflow:hover>a {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+        transform: scale(1.1);
+    }
+    
+    .name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 24pt;
+        color: rgb(54, 48, 48);
+    }
+    
+    .test2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5px;
+        font-size: 12pt;
+        color: rgb(54, 48, 48);
+        font-family: "Comic Sans MS";
+    }
+    
+    .ig {
+        width: 64px;
+        height: 66px;
+        margin: 2px;
+    }
+    
+    .fb {
+        width: 60px;
+        height: 60px;
+        margin: 4px;
+    }
+    
+    .em {
+        width: 50px;
+        height: 70px;
+        margin: 6px;
+    }
+    
+    .b1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .b2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .div_type {
+        display: inline-block;
+        width: 750px;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+    /*--------PROGRAMMING SKILL---------*/
+    
+    .skill-left {
+        position: absolute;
+        width: 30%;
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: -70px;
+        left: 25%;
+    }
+    
+    .text3 {
+        margin-left: 100px;
+    }
+    
+    .skill-left2 {
+        position: relative;
+        width: 30%;
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: -50px;
+        left: 60%;
+    }
+    
+    .skill-left3 {
+        position: absolute;
+        left: 580px;
+        top: -600px;
+        animation: Move123 1s infinite alternate;
+        /*IE*/
+        -moz-animation: Move123 1s infinite alternate;
+        /*FireFox*/
+        -webkit-animation: Move123 1s infinite alternate;
+        /*Chrome,Safari*/
+    }
+    
+    @keyframes Move123 {
+        from {
+            top: 10px;
+        }
+        to {
+            top: 30px;
+        }
+    }
+    
+    @-moz-keyframes Move123 {
+        from {
+            top: 10px;
+        }
+        to {
+            top: 30px;
+        }
+    }
+    
+    @-webkit-keyframes Move123 {
+        from {
+            top: 10px;
+        }
+        to {
+            top: 30px;
+        }
+    }
+    
+    .pro {
+        text-align: center;
+        right: 25%;
+        margin-top: 60px;
+    }
+    
+    .pro1 {
+        text-align: center;
+        margin-top: 900px;
+        margin-left: -780px;
+    }
+    
+    .pro001 {
+        position: relative;
+        margin-top: 300px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 30px;
+    }
+    /*-----*/
+    
+    .allpiano {
+        margin-top: 200px;
+    }
+    
+    .b3 {
+        width: 80%;
+        margin-top: 50px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 30px;
+        bottom: 80%;
+        padding: 5px 15px;
+        z-index: 10;
+        width: 800px;
+        height: 350px;
+    }
+    
+    .b4 {
+        margin-top: -10px;
+        margin-left: 20px;
+        width: 100%;
+    }
+    
+    .skills {
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border-radius: 50px;
+    }
+    
+    .hc,
+    .j,
+    .cc,
+    .d,
+    .a {
+        position: relative;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .hc {
+        background-color: rgba(219, 13, 13, 0.651);
+        animation: skill1 5s;
+        width: 80%
+    }
+    
+    .j {
+        background-color: rgba(127, 255, 212, 0.726);
+        animation: skill2 5s;
+        width: 80%
+    }
+    
+    .cc {
+        background-color: rgba(236, 240, 16, 0.87);
+        animation: skill3 5s;
+        width: 70%
+    }
+    
+    .d {
+        background-color: rgba(15, 233, 33, 0.623);
+        animation: skill4 5s;
+        width: 90%
+    }
+    
+    .a {
+        background-color: rgba(20, 17, 226, 0.589);
+        animation: skill5 5s;
+        width: 60%
+    }
+    
+    @keyframes skill1 {
+        from {
+            width: 0%;
+            ;
+        }
+        to {
+            width: 80%;
+            ;
+        }
+    }
+    
+    @keyframes skill2 {
+        from {
+            width: 0%;
+            ;
+        }
+        to {
+            width: 80%;
+            ;
+        }
+    }
+    
+    @keyframes skill3 {
+        from {
+            width: 0%;
+            ;
+        }
+        to {
+            width: 70%;
+            ;
+        }
+    }
+    
+    @keyframes skill4 {
+        from {
+            width: 0%;
+            ;
+        }
+        to {
+            width: 90%;
+            ;
+        }
+    }
+    
+    @keyframes skill5 {
+        from {
+            width: 0%;
+            ;
+        }
+        to {
+            width: 60%;
+            ;
+        }
+    }
+    /*---SKILL---*/
+    /*.test4 {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    top: -200px;
+    right: 8%;
+}*/
+    
+    .piano {
+        font-weight: bold;
+        position: absolute;
+        left: 590px;
+        top: 5cm;
+        font-size: 18px;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10px;
+    }
+    
+    .allpiano {
+        margin-top: -100px;
+    }
+    
+    .piano-img {
+        position: absolute;
+        top: -90px;
+        left: 590px;
+    }
+    
+    .pi img {
+        opacity: 0;
+        width: 300px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 10px;
+        bottom: 80%;
+        padding: 10px 10px;
+    }
+    
+    .piano:hover~.pi img {
+        opacity: 1;
+        transition: .5s;
+    }
+    /*----輕觸出現照片---*/
+    
+    .sk {
+        font-weight: bold;
+        position: absolute;
+        left: 720px;
+        top: 5cm;
+        font-size: 18px;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10px;
+    }
+    
+    .sk-img {
+        position: absolute;
+        top: -100px;
+        left: 710px;
+    }
+    
+    .skk img {
+        opacity: 0;
+        width: 200px;
+        height: 250px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 10px;
+        bottom: 80%;
+        padding: 10px 10px;
+    }
+    
+    .sk:hover~.skk img {
+        opacity: 1;
+        transition: .5s;
+    }
+    
+    .bk {
+        font-weight: bold;
+        position: absolute;
+        left: 890px;
+        top: 5cm;
+        font-size: 18px;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10px;
+    }
+    
+    .all {
+        margin-top: -100px;
+        background-color: #fff;
+    }
+    
+    .bk-img {
+        position: absolute;
+        top: -80px;
+        left: 770px;
+        width: 300px;
+    }
+    
+    .bkk img {
+        opacity: 0;
+        width: 300px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 10px;
+        bottom: 80%;
+        padding: 10px 10px;
+    }
+    
+    .bk:hover~.bkk img {
+        opacity: 1;
+        transition: .5s;
+    }
+    
+    .ps {
+        font-weight: bold;
+        position: absolute;
+        left: 1040px;
+        top: 5cm;
+        font-size: 18px;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10px;
+    }
+    
+    .ps-img {
+        position: absolute;
+        top: -10px;
+        left: 910px;
+        width: 300px;
+    }
+    
+    .pss img {
+        opacity: 0;
+        width: 200px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 10px;
+        bottom: 80%;
+        padding: 10px 10px;
+    }
+    
+    .ps:hover~.pss img {
+        opacity: 1;
+        transition: .5s;
+    }
+    
+    .wrapper1 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 560px;
+        top: 4cm;
+        clip: rect(0px, 100px, 100px, 50px);
+        margin-top: 10px;
+    }
+    
+    .wrapper2 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 710px;
+        top: 4cm;
+        clip: rect(0px, 100px, 100px, 50px);
+        margin-top: 10px;
+    }
+    
+    .wrapper3 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 860px;
+        top: 4cm;
+        clip: rect(0px, 100px, 100px, 50px);
+        margin-top: 10px;
+    }
+    
+    .wrapper4 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 1010px;
+        top: 4cm;
+        clip: rect(0px, 100px, 100px, 50px);
+        margin-top: 10px;
+    }
+    
+    .circle {
+        width: 80px;
+        height: 80px;
+        border: 10px solid #825083e1;
+        border-radius: 50px;
+        position: absolute;
+        clip: rect(0px, 50px, 100px, 0px);
+    }
+    
+    div[data-anim~=base] {
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+    
+    .wrapper1[data-anim~=wrapper] {
+        animation-duration: 0.01s;
+        animation-delay: 1s;
+        animation-name: close-w;
+    }
+    
+    .wrapper2[data-anim~=wrapper] {
+        animation-duration: 0.01s;
+        animation-delay: 1s;
+        animation-name: close-w;
+    }
+    
+    .wrapper3[data-anim~=wrapper] {
+        animation-duration: 0.01s;
+        animation-delay: 1s;
+        animation-name: close-w;
+    }
+    
+    .wrapper4[data-anim~=wrapper] {
+        animation-duration: 0.01s;
+        animation-delay: 1s;
+        animation-name: close-w;
+    }
+    
+    .cir1[data-anim~=left] {
+        animation-duration: 2s;
+        animation-name: cirr1;
+    }
+    
+    .cir2[data-anim~=left] {
+        animation-duration: 2s;
+        animation-name: cirr2;
+    }
+    
+    .cir3[data-anim~=left] {
+        animation-duration: 2s;
+        animation-name: cirr3;
+    }
+    
+    .cir4[data-anim~=left] {
+        animation-duration: 2s;
+        animation-name: cirr4;
+    }
+    
+    .circle[data-anim~=right] {
+        animation-duration: 1s;
+        animation-name: right;
+    }
+    
+    @keyframes right {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(180deg);
+        }
+    }
+    
+    @keyframes cirr1 {
+        from {
+            -webkit-transform: rotate(90deg);
+        }
+        to {
+            -webkit-transform: rotate(270deg);
+        }
+    }
+    
+    @keyframes cirr2 {
+        from {
+            -webkit-transform: rotate(72deg);
+        }
+        to {
+            -webkit-transform: rotate(288deg);
+        }
+    }
+    
+    @keyframes cirr3 {
+        from {
+            -webkit-transform: rotate(60deg);
+        }
+        to {
+            -webkit-transform: rotate(300deg);
+        }
+    }
+    
+    @keyframes cirr4 {
+        from {
+            -webkit-transform: rotate(135deg);
+        }
+        to {
+            -webkit-transform: rotate(225deg);
+        }
+    }
+    
+    @keyframes close-w {
+        to {
+            clip: rect(auto, auto, auto, auto);
+        }
+    }
+    /*--------經歷--------*/
+    
+    .col-left {
+        position: absolute;
+        width: 1000px;
+        height: 1000px;
+        display: inline-block;
+        margin-left: 100px;
+        left: 25%;
+        margin-top: 50px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 30px;
+    }
+    
+    .col1 {
+        height: 800px;
+        display: inline;
+        width: 2100px;
+    }
+    
+    .col1 p {
+        width: 250px;
+        text-align: center;
+    }
+    
+    .col1 h2 {
+        width: 500px;
+        text-align: center;
+    }
+    
+    .h222 {
+        position: absolute;
+        top: 0;
+        left: 510px;
+    }
+    /*.line {
+    width: 0.1px;
+    height: 400px;
+    background-color: #000;
+}*/
+    /*-------大二上---------*/
+    
+    .h111 {
+        position: absolute;
+        left: 20px;
+        top: 472px;
+    }
+    
+    .col1 img {
+        width: 470px;
+        text-align: center;
+    }
+    
+    .coll1 a {
+        width: 250px;
+        height: 100px;
+    }
+    
+    .coll1:hover {
+        filter: brightness(.5);
+        transition: 1.5s;
+    }
+    
+    .coll1-pp .coll1 {
+        position: absolute;
+        left: 20px;
+        top: 530px;
+    }
+    
+    .coll1-p {
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        left: 140px;
+        top: 610px;
+    }
+    
+    .coll1:hover~.coll1-p {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
+    .ul1 {
+        position: absolute;
+        left: 20px;
+        top: 810px;
+    }
+    /*--------大一下---------*/
+    
+    .coll2:hover {
+        filter: brightness(.5);
+        transition: 1.5s;
+    }
+    
+    .coll1-pp2 .coll2 {
+        position: absolute;
+        left: 510px;
+        top: 70px;
+    }
+    
+    .coll1-p2 {
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        left: 630px;
+        top: 160px;
+    }
+    
+    .coll2:hover~.coll1-p2 {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
+    .ul2 {
+        position: absolute;
+        left: 490px;
+        top: 360px;
+    }
+    /*--------大二下-------------*/
+    
+    .h333 {
+        position: absolute;
+        left: 511px;
+        top: 474px;
+    }
+    
+    .coll3:hover {
+        filter: brightness(.5);
+        transition: 1.5s;
+    }
+    
+    .coll1-pp3 .coll3 {
+        position: absolute;
+        left: 510px;
+        top: 532px;
+    }
+    
+    .coll1-p3 {
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        left: 630px;
+        top: 620px;
+    }
+    
+    .coll3:hover~.coll1-p3 {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
+    .ul3 {
+        position: absolute;
+        left: 490px;
+        top: 810px;
+    }
+    /*----------大一上-------------*/
+    
+    .coll4:hover {
+        filter: brightness(.5);
+        transition: 1.5s;
+    }
+    
+    .coll1-pp4 .coll4 {
+        position: absolute;
+        left: 20px;
+        top: 70px;
+    }
+    
+    .coll1-p4 {
+        opacity: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        left: 140px;
+        top: 160px;
+    }
+    
+    .coll4:hover~.coll1-p4 {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    
+    .ul4 {
+        position: absolute;
+        left: 20px;
+        top: 360px;
+    }
+    /*--照片觸碰變透明--*/
+    /*slideshow*/
+    
+    .col-left02 {
+        position: absolute;
+        width: 800px;
+        height: 470px;
+        display: inline-block;
+        margin-left: 100px;
+        left: 25%;
+        margin-top: 50px;
+        background: rgba(250, 245, 245, 0.404);
+        border-radius: 30px;
+        padding: 100px;
+    }
+    
+    .theme img {
+        width: 60%;
+    }
+    /*slideshow*/
+    
+    .mySlides {
+        display: none;
+    }
+    
+    .mySlides img {
+        vertical-align: middle;
+        /*垂直至中*/
+        width: 480px;
+        height: 400px;
+        margin-left: 19%;
+        margin-top: 0%;
+        box-sizing: border-box;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .mySlides1 img {
+        vertical-align: middle;
+        /*垂直至中*/
+        width: 500px;
+        height: 600px;
+        margin-left: 19%;
+        margin-top: 0%;
+        box-sizing: border-box;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .slide {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    /*圖片左右兩邊圖標*/
+    
+    .pre,
+    .next {
+        cursor: pointer;
+        /*將鼠標移到圖片上可以看光標結果-手型。*/
+        position: absolute;
+        top: 53%;
+        width: auto;
+        padding: 0%;
+        margin-left: 20%;
+        color: #494645;
+        font-weight: bold;
+        font-size: 40px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        /*是否可以選擇屬性指定的元素的文本*/
+    }
+    /*右邊按鈕-移到右邊*/
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        /*按鈕圖樣*/
+        margin-right: 16%;
+    }
+    /*hover:當滑鼠移至超連結時，不論是文字變色、位移、換背景*/
+    
+    .pre:hover,
+    .next:hover {
+        background-color: #999B84;
+    }
+    
+    .cirbtn {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cir {
+        cursor: pointer;
+        /*指定指標的形狀:手型*/
+        height: 15px;
+        width: 15px;
+        margin: 1%;
+        background-color: #DDB7AB;
+        list-style-type: circle;
+        border-radius: 50%;
+        transition: background-color 0.6s ease;
+        /*總時長0.6秒，ease速度曲線，轉變過程中由慢到快，再到慢结束。*/
+    }
+    /*'當滑鼠移到連結時超連結的樣式*/
+    
+    .active,
+    .cir:hover {
+        background-color: #999B84;
+    }
+    /*------------------------*/
+    
+    .footer {
+        width: 100%;
+        background-color: rgb(104, 72, 4);
+        height: 100px;
+        overflow: hidden;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 830px;
+    }
+    
+    .ft {
+        margin: 0px auto;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    /*-------回最上方-----*/
+    
+    #myBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #e9b50d;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+        background-color: #f1560e;
+    }
+    /*-----捲到才出現畫面--------*/
+    
+    .hideme {
+        opacity: 0;
+    }
+    /*------後續補充-----*/
+    
+    .hea {
+        background-color: rgb(104, 72, 4);
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        color: white;
+        font-size: 24px;
+        font-family: Brush Script MT, Brush Script Std, cursive;
+    }
+    
+    .www {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .tt3 {
+        margin-top: 50px;
+    }
+    
+    .ppro111 {
+        position: relative;
+        margin-top: 300px;
+    }
+    
+    .rr1 {
+        top: 5cm;
+        margin-left: 750px;
+    }
+    
+    .rr2 {
+        margin-left: 580px;
+        margin-top: 1060px;
+    }
